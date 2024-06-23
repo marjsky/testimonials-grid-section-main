@@ -10,18 +10,6 @@
     --light-grayish-blue: hsl(210, 46%, 95%);
 }
 
-/*  
-Note for text colors:
-
-1. "Verified Graduate" has the same color as the person's name with 50% opacity
-2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
-
-1p medium 13px white
-2p medium 11px 50% white
-3p semibold 20px white
-4p medium 13px 70%
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -37,13 +25,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .container {
-    width: 1110px;
+    max-width: 1110px;
     height: 572px;
     margin-top: 164px;
+    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -73,17 +61,20 @@ body {
     background-color: var(--dark-grayish-blue);
     color: var(--white);
 }
+
 .testimonial-3 {
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: var(--white);
 }
+
 .testimonial-4 {
     grid-column: 2/ span 2;
     grid-row: 2 / 3;
     background-color: var(--dark-blackish-blue);
     color: var(--white);
 }
+
 .testimonial-5 {
     grid-column: 4/5;
     grid-row: 1 / span 2;
@@ -93,22 +84,22 @@ body {
 .box {
     border-radius: 8px;
     padding: 26px 32px;
+    box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25)
 }
 
 .avatar {
     display: flex;
 }
 
-.avatar > img {
+.avatar>img {
     width: 28px;
     height: 28px;
-    
     border-radius: 50%;
     margin-right: 17px;
 }
 
-.testimonial-1 > .avatar > img, 
-.testimonial-4 > .avatar > img {
+.testimonial-1>.avatar>img,
+.testimonial-4>.avatar>img {
     border: 2px #A775F1 solid;
 }
 
@@ -131,6 +122,25 @@ body {
 
 /* mobile viewpoint */
 
-@media screen and ( max-width: 375px ) {
+@media screen and (max-width: 375px) {
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin: 71px 24px;
+    }
+
+    .testimonial-1>.brief {
+        width: 262px;
+    }
+
+    .testimonial-1>.detail {
+        width: 247px;
+    }
+
+    .quote {
+        right: 24px;
+    }
 }
