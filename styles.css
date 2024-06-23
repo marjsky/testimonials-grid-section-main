@@ -31,10 +31,103 @@ Note for text colors:
 body {
     background-color: var(--light-grayish-blue);
     font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
     font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+.container {
+    width: 1110px;
+    height: 572px;
+    margin-top: 164px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 24px;
+}
 
+.testimonial-1 {
+    position: relative;
+    grid-column: 1/ span 2;
+    background-color: var(--violet);
+    color: var(--white);
+    z-index: 1;
+}
+
+.quote {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 80px;
+
+}
+
+.testimonial-2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: var(--dark-grayish-blue);
+    color: var(--white);
+}
+.testimonial-3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: var(--white);
+}
+.testimonial-4 {
+    grid-column: 2/ span 2;
+    grid-row: 2 / 3;
+    background-color: var(--dark-blackish-blue);
+    color: var(--white);
+}
+.testimonial-5 {
+    grid-column: 4/5;
+    grid-row: 1 / span 2;
+    background-color: var(--white);
+}
+
+.box {
+    border-radius: 8px;
+    padding: 26px 32px;
+}
+
+.avatar {
+    display: flex;
+}
+
+.avatar > img {
+    width: 28px;
+    height: 28px;
+    
+    border-radius: 50%;
+    margin-right: 17px;
+}
+
+.testimonial-1 > .avatar > img, 
+.testimonial-4 > .avatar > img {
+    border: 2px #A775F1 solid;
+}
+
+.status {
+    font-size: 11px;
+    opacity: 50%;
+}
+
+.brief {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 18px;
+}
+
+.detail {
+    padding-top: 16px;
+    opacity: 70%;
+    line-height: 18px;
+}
 
 /* mobile viewpoint */
 
